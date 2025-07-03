@@ -12,7 +12,7 @@ export default function HeroSection() {
         }}
       />
       <div className="absolute inset-0 bg-pioneer-navy/80" />
-      
+
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center animate-fade-in">
         <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
           <span className="text-white">Pioneer</span>

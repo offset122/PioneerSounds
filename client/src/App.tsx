@@ -10,6 +10,7 @@ import Equipment from "@/pages/equipment";
 import Portfolio from "@/pages/portfolio";
 import Contact from "@/pages/contact";
 import NotFound from "@/pages/not-found";
+import FloatingContactBar from "@/components/floating-contact-bar";
 
 function Router() {
   return (
@@ -31,6 +32,7 @@ function App() {
       <TooltipProvider>
         <Toaster />
         <Router />
+        <FloatingContactBar />
       </TooltipProvider>
     </QueryClientProvider>
   );

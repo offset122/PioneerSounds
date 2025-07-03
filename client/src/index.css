@@ -2,6 +2,72 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Enhanced mobile responsiveness */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply text-base leading-relaxed;
+  }
+  
+  /* Better mobile touch targets */
+  @media (max-width: 768px) {
+    button, a {
+      @apply min-h-[44px] min-w-[44px];
+    }
+  }
+}
+
+/* Enhanced animations and transitions */
+@layer utilities {
+  .animate-fade-in {
+    animation: fadeIn 0.8s ease-out forwards;
+  }
+  
+  .animate-slide-up {
+    animation: slideUp 0.6s ease-out forwards;
+  }
+  
+  .animate-bounce-gentle {
+    animation: bounceGentle 2s ease-in-out infinite;
+  }
+  
+  .shadow-3xl {
+    box-shadow: 0 35px 60px -12px rgba(0, 0, 0, 0.25);
+  }
+  
+  /* Mobile-specific enhancements */
+  @media (max-width: 768px) {
+    .container {
+      @apply px-4;
+    }
+    
+    h1 {
+      @apply text-3xl sm:text-4xl;
+    }
+    
+    h2 {
+      @apply text-2xl sm:text-3xl;
+    }
+    
+    h3 {
+      @apply text-xl sm:text-2xl;
+    }
+    
+    /* Better spacing for mobile */
+    .section-padding {
+      @apply py-12 sm:py-16 lg:py-20;
+    }
+    
+    /* Improved mobile navigation */
+    .mobile-nav {
+      @apply backdrop-blur-md bg-pioneer-navy/95;
+    }
+  }
+}
+
 :root {
   --background: hsl(0, 0%, 100%);
   --foreground: hsl(20, 14.3%, 4.1%);
