@@ -21,7 +21,7 @@ export default function Navigation() {
   };
 
   return (
-    <nav className="fixed top-0 w-full mobile-nav z-50 border-b border-gray-800/50">
+    <nav className="fixed top-0 w-full bg-pioneer-navy/95 backdrop-blur-md z-50 border-b border-pioneer-orange/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <Link href="/">
@@ -36,8 +36,8 @@ export default function Navigation() {
                 href={item.path}
                 className={`px-4 py-2 text-sm font-medium transition-all duration-300 rounded-lg ${
                   location === item.path
-                    ? "text-pioneer-orange bg-pioneer-orange/10 border border-pioneer-orange/20"
-                    : "text-gray-300 hover:text-white hover:bg-pioneer-charcoal/50"
+                    ? "text-pioneer-orange bg-pioneer-orange/20 border border-pioneer-orange/30"
+                    : "text-gray-200 hover:text-white hover:bg-pioneer-charcoal/70"
                 }`}
               >
                 {item.label}
@@ -49,7 +49,7 @@ export default function Navigation() {
           <div className="md:hidden">
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="text-gray-300 hover:text-white focus:outline-none focus:text-pioneer-orange transition-colors duration-200 p-2 rounded-lg hover:bg-pioneer-charcoal/30"
+              className="text-gray-200 hover:text-white focus:outline-none focus:text-pioneer-orange transition-colors duration-200 p-2 rounded-lg hover:bg-pioneer-charcoal/50"
             >
               {isMobileMenuOpen ? (
                 <X className="h-6 w-6" />
@@ -62,7 +62,7 @@ export default function Navigation() {
 
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <div className="md:hidden absolute top-full left-0 right-0 bg-pioneer-navy/98 backdrop-blur-lg border-b border-gray-800/50">
+          <div className="md:hidden absolute top-full left-0 right-0 bg-pioneer-navy/98 backdrop-blur-lg border-b border-pioneer-orange/20">
             <div className="px-4 pt-2 pb-4 space-y-2">
               {navItems.map((item) => (
                 <Link
@@ -71,8 +71,8 @@ export default function Navigation() {
                   onClick={handleMobileNavClick}
                   className={`block px-4 py-3 text-base font-medium transition-all duration-300 rounded-xl ${
                     location === item.path
-                      ? "text-pioneer-orange bg-pioneer-orange/10 border border-pioneer-orange/20"
-                      : "text-gray-300 hover:text-white hover:bg-pioneer-charcoal/30 active:bg-pioneer-charcoal/50"
+                      ? "text-pioneer-orange bg-pioneer-orange/20 border border-pioneer-orange/30"
+                      : "text-gray-200 hover:text-white hover:bg-pioneer-charcoal/50 active:bg-pioneer-charcoal/70"
                   }`}
                 >
                   {item.label}

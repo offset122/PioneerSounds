@@ -63,7 +63,7 @@
     
     /* Improved mobile navigation */
     .mobile-nav {
-      @apply backdrop-blur-md bg-pioneer-navy bg-opacity-95;
+      @apply backdrop-blur-md bg-pioneer-navy/95;
     }
   }
 }
