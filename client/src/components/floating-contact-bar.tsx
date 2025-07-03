@@ -58,7 +58,7 @@ export default function FloatingContactBar() {
 
       {/* Mobile Floating Bar */}
       <div className="md:hidden fixed bottom-0 left-0 right-0 z-50">
-        <div className="bg-pioneer-navy/95 backdrop-blur-md border-t border-pioneer-orange/20 p-4">
+        <div className="bg-pioneer-navy bg-opacity-95 backdrop-blur-md border-t border-pioneer-orange border-opacity-20 p-4">
           <div className="flex justify-center items-center space-x-6">
             <button
               onClick={handlePhoneClick}

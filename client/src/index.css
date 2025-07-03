@@ -171,6 +171,14 @@
   border-color: var(--pioneer-orange);
 }
 
+.bg-opacity-95 {
+  --tw-bg-opacity: 0.95;
+}
+
+.border-opacity-20 {
+  --tw-border-opacity: 0.2;
+}
+
 /* Gradient backgrounds */
 .bg-gradient-pioneer {
   background: linear-gradient(135deg, var(--pioneer-navy) 0%, var(--pioneer-charcoal) 100%);
