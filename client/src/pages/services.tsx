@@ -26,7 +26,7 @@ export default function Services() {
         "Snake cables and distribution systems",
       ],
       image:
-        "https://www.istockphoto.com/photo/dj-mixer-with-headphones-gm538479389-58226856?searchscope=image%2Cfilm",
+        "https://media.istockphoto.com/id/177747450/photo/group-of-speakers.jpg?s=612x612&w=0&k=20&c=Vgy_BuEqagfShC1BgT5VPO_LAjb1VAwpJMkzPigIfpg=",
     },
     {
       icon: Lightbulb,
@@ -54,7 +54,7 @@ export default function Services() {
         "Video switching and distribution equipment",
       ],
       image:
-        "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600",
+        "https://media.istockphoto.com/id/182677992/photo/people-watching-movie-in-dark-cinema.jpg?s=612x612&w=0&k=20&c=IlDGQdGxLyn1r54I4xdrf-CG7sC_VvNgR5nrOPLrhQU=",
     },
     {
       icon: Guitar,
@@ -96,7 +96,7 @@ export default function Services() {
         "Complete mobile DJ packages",
       ],
       image:
-        "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600",
+        "https://media.istockphoto.com/id/538479389/photo/dj-mixer-with-headphones.jpg?s=612x612&w=0&k=20&c=ugkWXMbcIJ5IlIb8uGXGJI_g2V1earxgERDVYF6NuEg=",
     },
   ];
 
