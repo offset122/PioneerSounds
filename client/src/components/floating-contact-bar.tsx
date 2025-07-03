@@ -128,14 +128,7 @@ export default function FloatingContactBar() {
             )}
           </button>
 
-          {/* Contact Info Display for Mobile */}
-          {isExpanded && (
-            <div className="absolute bottom-20 right-0 bg-pioneer-navy bg-opacity-95 backdrop-blur-md rounded-lg p-3 text-right animate-slide-up">
-              <p className="text-white text-sm font-medium">Quick Contact</p>
-              <p className="text-gray-300 text-xs">{contactInfo.phone}</p>
-              <p className="text-gray-300 text-xs">{contactInfo.email}</p>
-            </div>
-          )}
+          
         </div>
       </div>
     </>
