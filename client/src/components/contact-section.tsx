@@ -25,7 +25,7 @@ export default function ContactSection() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     // Simulate form submission (since no database is needed)
     setTimeout(() => {
       setIsSubmitting(false);
@@ -38,7 +38,7 @@ export default function ContactSection() {
         eventDate: "",
         message: "",
       });
-      
+
       setTimeout(() => setShowSuccess(false), 5000);
     }, 1000);
   };
@@ -59,7 +59,7 @@ export default function ContactSection() {
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">Get In Touch</h2>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto">Ready to make your event unforgettable? Contact us for a personalized quote</p>
         </div>
-        
+
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Contact Information */}
           <div className="space-y-8 animate-slide-up">
@@ -78,7 +78,7 @@ export default function ContactSection() {
                     </div>
                   </div>
                 </div>
-                
+
                 <div className="flex items-center space-x-4">
                   <div className="bg-pioneer-orange p-3 rounded-lg">
                     <Phone className="text-white w-5 h-5" />
@@ -91,7 +91,7 @@ export default function ContactSection() {
                     </div>
                   </div>
                 </div>
-                
+
                 <div className="flex items-center space-x-4">
                   <div className="bg-pioneer-orange p-3 rounded-lg">
                     <Mail className="text-white w-5 h-5" />
@@ -106,7 +106,7 @@ export default function ContactSection() {
                 </div>
               </div>
             </div>
-            
+
             {/* Services Summary */}
             <div className="bg-pioneer-charcoal p-6 rounded-xl">
               <h4 className="text-xl font-bold text-white mb-4">Our Services Include:</h4>
@@ -120,18 +120,18 @@ export default function ContactSection() {
               </ul>
             </div>
           </div>
-          
+
           {/* Contact Form */}
           <div className="bg-pioneer-charcoal p-8 rounded-xl shadow-lg animate-slide-up">
             <h3 className="text-2xl font-bold text-white mb-6">Request a Quote</h3>
-            
+
             {showSuccess && (
-              <div className="bg-green-600 text-white p-4 rounded-lg mb-6">
-                <h4 className="font-semibold">Thank you for your inquiry!</h4>
-                <p>We'll get back to you soon with a personalized quote.</p>
-              </div>
-            )}
-            
+            <div className="mb-6 p-4 bg-green-600 text-white rounded-lg flex items-center">
+              <Check className="mr-2" />
+              Your email client should now open with your inquiry. Please send the email to complete your submission.
+            </div>
+          )}
+
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
@@ -155,7 +155,7 @@ export default function ContactSection() {
                   />
                 </div>
               </div>
-              
+
               <div>
                 <label className="block text-gray-300 mb-2">Email</label>
                 <Input 
@@ -167,7 +167,7 @@ export default function ContactSection() {
                   required
                 />
               </div>
-              
+
               <div>
                 <label className="block text-gray-300 mb-2">Event Type</label>
                 <Select value={formData.eventType} onValueChange={(value) => handleInputChange('eventType', value)}>
@@ -184,7 +184,7 @@ export default function ContactSection() {
                   </SelectContent>
                 </Select>
               </div>
-              
+
               <div>
                 <label className="block text-gray-300 mb-2">Event Date</label>
                 <Input 
@@ -194,7 +194,7 @@ export default function ContactSection() {
                   className="bg-pioneer-navy border-gray-600 text-white focus:border-pioneer-orange"
                 />
               </div>
-              
+
               <div>
                 <label className="block text-gray-300 mb-2">Message</label>
                 <Textarea 
@@ -206,7 +206,7 @@ export default function ContactSection() {
                   required
                 />
               </div>
-              
+
               <Button 
                 type="submit" 
                 disabled={isSubmitting}
