@@ -1,16 +1,35 @@
+
 import type { Express } from "express";
 import { createServer, type Server } from "http";
-import { storage } from "./storage";
-import { insertContactInquirySchema } from "@shared/schema";
 import { z } from "zod";
+
+// Simple contact form schema
+const contactInquirySchema = z.object({
+  name: z.string().min(1, "Name is required"),
+  email: z.string().email("Valid email is required"),
+  phone: z.string().optional(),
+  eventType: z.string().min(1, "Event type is required"),
+  eventDate: z.string().min(1, "Event date is required"),
+  venue: z.string().min(1, "Venue is required"),
+  guestCount: z.number().min(1, "Guest count must be at least 1"),
+  services: z.array(z.string()).min(1, "At least one service is required"),
+  message: z.string().optional(),
+});
 
 export async function registerRoutes(app: Express): Promise<Server> {
   // Contact inquiry endpoint
   app.post("/api/contact", async (req, res) => {
     try {
-      const inquiry = insertContactInquirySchema.parse(req.body);
-      const createdInquiry = await storage.createContactInquiry(inquiry);
-      res.json({ success: true, inquiry: createdInquiry });
+      const inquiry = contactInquirySchema.parse(req.body);
+      
+      // For now, just log the inquiry (you can integrate with email service later)
+      console.log("New contact inquiry:", inquiry);
+      
+      res.json({ 
+        success: true, 
+        message: "Thank you for your inquiry! We'll get back to you soon.",
+        inquiry: inquiry 
+      });
     } catch (error) {
       if (error instanceof z.ZodError) {
         res.status(400).json({ 
@@ -24,19 +43,6 @@ export async function registerRoutes(app: Express): Promise<Server> {
           error: "Failed to submit inquiry" 
         });
       }
-    }
-  });
-
-  // Get all contact inquiries (for admin use)
-  app.get("/api/contact", async (req, res) => {
-    try {
-      const inquiries = await storage.getContactInquiries();
-      res.json({ success: true, inquiries });
-    } catch (error) {
-      res.status(500).json({ 
-        success: false, 
-        error: "Failed to fetch inquiries" 
-      });
     }
   });
 
