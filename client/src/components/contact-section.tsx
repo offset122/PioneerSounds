@@ -81,7 +81,10 @@ export default function ContactSection() {
                   </div>
                   <div>
                     <p className="text-gray-400">Location</p>
-                    <p className="text-white font-semibold">Kiambu Town, Kenya</p>
+                    <div className="text-white font-semibold">
+                      <p>Kiambu Town, Kika Stalls Suite E8</p>
+                      <p className="text-sm text-gray-400">P.O BOX 322-00900 Kiambu, Kenya</p>
+                    </div>
                   </div>
                 </div>
                 
@@ -91,7 +94,10 @@ export default function ContactSection() {
                   </div>
                   <div>
                     <p className="text-gray-400">Phone</p>
-                    <p className="text-white font-semibold">+254 XXX XXX XXX</p>
+                    <div className="text-white font-semibold">
+                      <p>0720-495135</p>
+                      <p>0738-050639</p>
+                    </div>
                   </div>
                 </div>
                 
@@ -101,7 +107,10 @@ export default function ContactSection() {
                   </div>
                   <div>
                     <p className="text-gray-400">Email</p>
-                    <p className="text-white font-semibold">info@pioneersounds.co.ke</p>
+                    <div className="text-white font-semibold">
+                      <p>pioneersounds@gmail.com</p>
+                      <p className="text-pioneer-orange text-sm">www.pioneersounds.co.ke</p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -153,6 +162,7 @@ export default function ContactSection() {
                         <FormControl>
                           <Input 
                             {...field}
+                            value={field.value || ""}
                             type="tel"
                             className="bg-pioneer-navy border-gray-600 text-white focus:border-pioneer-orange"
                             placeholder="Your Phone"
@@ -189,7 +199,7 @@ export default function ContactSection() {
                   render={({ field }) => (
                     <FormItem>
                       <FormLabel className="text-gray-300">Event Type</FormLabel>
-                      <Select onValueChange={field.onChange} defaultValue={field.value}>
+                      <Select onValueChange={field.onChange} value={field.value || ""}>
                         <FormControl>
                           <SelectTrigger className="bg-pioneer-navy border-gray-600 text-white focus:border-pioneer-orange">
                             <SelectValue placeholder="Select Event Type" />
@@ -218,6 +228,7 @@ export default function ContactSection() {
                       <FormControl>
                         <Input 
                           {...field}
+                          value={field.value || ""}
                           type="date"
                           className="bg-pioneer-navy border-gray-600 text-white focus:border-pioneer-orange"
                         />

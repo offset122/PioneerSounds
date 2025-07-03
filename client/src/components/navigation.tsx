@@ -1,12 +1,22 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
-import { scrollToSection } from "@/lib/utils";
+import { Link, useLocation } from "wouter";
+import Logo from "@/components/logo";
 
 export default function Navigation() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [location] = useLocation();
 
-  const handleNavClick = (sectionId: string) => {
-    scrollToSection(sectionId);
+  const navItems = [
+    { label: "Home", path: "/" },
+    { label: "About", path: "/about" },
+    { label: "Services", path: "/services" },
+    { label: "Equipment", path: "/equipment" },
+    { label: "Portfolio", path: "/portfolio" },
+    { label: "Contact", path: "/contact" }
+  ];
+
+  const handleMobileNavClick = () => {
     setIsMobileMenuOpen(false);
   };
 
@@ -15,42 +25,33 @@ export default function Navigation() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex-shrink-0">
-            <h1 className="text-2xl font-bold text-pioneer-orange">Pioneer Sounds</h1>
+            <Link href="/">
+              <Logo className="h-10 w-auto text-white" />
+            </Link>
           </div>
           
           {/* Desktop Navigation */}
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-8">
-              <button 
-                onClick={() => handleNavClick('home')}
-                className="text-gray-300 hover:text-pioneer-orange transition-colors duration-300"
-              >
-                Home
-              </button>
-              <button 
-                onClick={() => handleNavClick('services')}
-                className="text-gray-300 hover:text-pioneer-orange transition-colors duration-300"
-              >
-                Services
-              </button>
-              <button 
-                onClick={() => handleNavClick('equipment')}
-                className="text-gray-300 hover:text-pioneer-orange transition-colors duration-300"
-              >
-                Equipment
-              </button>
-              <button 
-                onClick={() => handleNavClick('portfolio')}
-                className="text-gray-300 hover:text-pioneer-orange transition-colors duration-300"
-              >
-                Portfolio
-              </button>
-              <button 
-                onClick={() => handleNavClick('contact')}
+              {navItems.slice(0, -1).map((item) => (
+                <Link 
+                  key={item.path}
+                  href={item.path}
+                  className={`transition-colors duration-300 ${
+                    location === item.path 
+                      ? "text-pioneer-orange" 
+                      : "text-gray-300 hover:text-pioneer-orange"
+                  }`}
+                >
+                  {item.label}
+                </Link>
+              ))}
+              <Link 
+                href="/contact"
                 className="bg-pioneer-orange text-white px-4 py-2 rounded-lg hover:bg-orange-600 transition-colors duration-300"
               >
                 Contact
-              </button>
+              </Link>
             </div>
           </div>
           
@@ -70,36 +71,20 @@ export default function Navigation() {
       {isMobileMenuOpen && (
         <div className="md:hidden bg-pioneer-charcoal border-t border-gray-800">
           <div className="px-2 pt-2 pb-3 space-y-1">
-            <button 
-              onClick={() => handleNavClick('home')}
-              className="block w-full text-left px-3 py-2 text-gray-300 hover:text-pioneer-orange"
-            >
-              Home
-            </button>
-            <button 
-              onClick={() => handleNavClick('services')}
-              className="block w-full text-left px-3 py-2 text-gray-300 hover:text-pioneer-orange"
-            >
-              Services
-            </button>
-            <button 
-              onClick={() => handleNavClick('equipment')}
-              className="block w-full text-left px-3 py-2 text-gray-300 hover:text-pioneer-orange"
-            >
-              Equipment
-            </button>
-            <button 
-              onClick={() => handleNavClick('portfolio')}
-              className="block w-full text-left px-3 py-2 text-gray-300 hover:text-pioneer-orange"
-            >
-              Portfolio
-            </button>
-            <button 
-              onClick={() => handleNavClick('contact')}
-              className="block w-full text-left px-3 py-2 text-gray-300 hover:text-pioneer-orange"
-            >
-              Contact
-            </button>
+            {navItems.map((item) => (
+              <Link 
+                key={item.path}
+                href={item.path}
+                onClick={handleMobileNavClick}
+                className={`block w-full text-left px-3 py-2 transition-colors duration-300 ${
+                  location === item.path 
+                    ? "text-pioneer-orange" 
+                    : "text-gray-300 hover:text-pioneer-orange"
+                }`}
+              >
+                {item.label}
+              </Link>
+            ))}
           </div>
         </div>
       )}

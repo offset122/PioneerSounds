@@ -1,5 +1,5 @@
 import { Play, Phone } from "lucide-react";
-import { scrollToSection } from "@/lib/utils";
+import { Link } from "wouter";
 
 export default function HeroSection() {
   return (
@@ -25,20 +25,18 @@ export default function HeroSection() {
           Your one-stop events gear provider for the hire of Sound, Projectors, Screens, Backline Gear, Video, Lighting & Stages
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <button
-            onClick={() => scrollToSection('services')}
-            className="bg-pioneer-orange text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-orange-600 transition-all duration-300 shadow-lg flex items-center justify-center gap-2"
-          >
-            <Play className="w-5 h-5" />
-            Explore Services
-          </button>
-          <button
-            onClick={() => scrollToSection('contact')}
-            className="border-2 border-pioneer-orange text-pioneer-orange px-8 py-4 rounded-lg text-lg font-semibold hover:bg-pioneer-orange hover:text-white transition-all duration-300 flex items-center justify-center gap-2"
-          >
-            <Phone className="w-5 h-5" />
-            Get Quote
-          </button>
+          <Link href="/services">
+            <button className="bg-pioneer-orange text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-orange-600 transition-all duration-300 shadow-lg flex items-center justify-center gap-2">
+              <Play className="w-5 h-5" />
+              Explore Services
+            </button>
+          </Link>
+          <Link href="/contact">
+            <button className="border-2 border-pioneer-orange text-pioneer-orange px-8 py-4 rounded-lg text-lg font-semibold hover:bg-pioneer-orange hover:text-white transition-all duration-300 flex items-center justify-center gap-2">
+              <Phone className="w-5 h-5" />
+              Get Quote
+            </button>
+          </Link>
         </div>
       </div>
     </section>
