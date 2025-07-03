@@ -95,6 +95,9 @@
   --pioneer-charcoal: hsl(217, 29%, 22%);
   --pioneer-orange: hsl(24, 100%, 48%);
   --pioneer-light: hsl(210, 17%, 98%);
+  --pioneer-green: hsl(120, 60%, 50%);
+  --pioneer-blue: hsl(207, 90%, 54%);
+  --pioneer-gray: hsl(220, 15%, 60%);
 }
 
 .dark {
@@ -169,6 +172,22 @@
 
 .focus\:border-pioneer-orange:focus {
   border-color: var(--pioneer-orange);
+}
+
+.bg-pioneer-green {
+  background-color: var(--pioneer-green);
+}
+
+.text-pioneer-green {
+  color: var(--pioneer-green);
+}
+
+.text-pioneer-blue {
+  color: var(--pioneer-blue);
+}
+
+.text-pioneer-gray {
+  color: var(--pioneer-gray);
 }
 
 .bg-opacity-95 {

@@ -51,6 +51,15 @@ export default {
           "4": "var(--chart-4)",
           "5": "var(--chart-5)",
         },
+        pioneer: {
+          navy: "var(--pioneer-navy)",
+          charcoal: "var(--pioneer-charcoal)",
+          orange: "var(--pioneer-orange)",
+          light: "var(--pioneer-light)",
+          green: "var(--pioneer-green)",
+          blue: "var(--pioneer-blue)",
+          gray: "var(--pioneer-gray)",
+        },
         sidebar: {
           DEFAULT: "var(--sidebar-background)",
           foreground: "var(--sidebar-foreground)",
