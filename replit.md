@@ -102,8 +102,12 @@ The application uses Drizzle ORM with PostgreSQL schemas defined in `shared/sche
 - Added custom Pioneer Sounds logo component based on professional audio branding
 - Updated contact information with real details from company PDF (Kiambu Town location, phone numbers, email)
 - Removed equipment gallery from home page as requested
+- Removed all database functionality - contact form now works without database storage
 - Implemented responsive design across all pages
 - Added comprehensive content based on PDF information including artists, venues, and client testimonials
+- Integrated authentic wedding photos from PDF into portfolio section
+- Created dedicated wedding gallery showcasing real Safari Park and Windsor Golf Club events
+- Updated homepage portfolio section with authentic wedding imagery
 
 ## Changelog
 - July 03, 2025. Initial setup

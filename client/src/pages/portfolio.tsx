@@ -33,20 +33,12 @@ const SankaraHotelImage = () => (
 );
 
 const SafariParkWeddingImage = () => (
-  <div className="w-full h-96 bg-gradient-to-br from-green-400 to-blue-400 rounded-xl flex items-center justify-center relative overflow-hidden">
-    <div className="absolute inset-0 bg-white opacity-10"></div>
-    <div className="relative text-center text-white z-10">
-      <h3 className="text-2xl font-bold mb-2">Safari Park Wedding</h3>
-      <p className="text-sm opacity-90">Outdoor Garden Ceremonies</p>
-      <div className="flex justify-center mt-4">
-        <div className="w-16 h-8 border-4 border-white rounded-t-full bg-transparent"></div>
-      </div>
-      <div className="flex justify-center space-x-2 mt-2">
-        <div className="w-3 h-3 bg-pink-400 rounded-full"></div>
-        <div className="w-3 h-3 bg-white rounded-full"></div>
-        <div className="w-3 h-3 bg-pink-400 rounded-full"></div>
-      </div>
-    </div>
+  <div className="w-full rounded-xl overflow-hidden shadow-lg">
+    <img 
+      src="/attached_assets/pioneer sounds profile.pdf-image-009_1751535111703.jpg"
+      alt="Pioneer Sounds Wedding Setup - Outdoor Garden Ceremony"
+      className="w-full h-96 object-cover"
+    />
   </div>
 );
 
@@ -110,8 +102,8 @@ export default function Portfolio() {
       description: "Creating magical moments with perfect audio and lighting for your special day",
       imageComponent: SafariParkWeddingImage,
       events: [
-        { venue: "Safari Park", description: "Elegant outdoor ceremony and reception" },
-        { venue: "Windsor Golf Club", description: "Sophisticated golf course wedding" },
+        { venue: "Safari Park", description: "Elegant outdoor ceremony and reception", image: "/attached_assets/pioneer sounds profile.pdf-image-009_1751535111703.jpg" },
+        { venue: "Windsor Golf Club", description: "Sophisticated golf course wedding", image: "/attached_assets/pioneer sounds profile.pdf-image-010_1751535111705.jpg" },
         { venue: "Great Rift Valley Lodge", description: "Scenic mountain lodge celebration" },
         { venue: "Marula Manor - Karen", description: "Luxurious garden wedding venue" },
         { venue: "UN Grounds", description: "Prestigious international venue" },
@@ -265,8 +257,78 @@ export default function Portfolio() {
         </div>
       </section>
 
-      {/* Private Events */}
+      {/* Wedding Gallery Showcase */}
       <section className="py-20 bg-pioneer-charcoal">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">Wedding Gallery</h2>
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+              Real weddings we've made unforgettable with professional audio and staging
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+            {/* Safari Park Wedding */}
+            <div className="bg-pioneer-navy rounded-xl overflow-hidden shadow-lg animate-slide-up">
+              <img 
+                src="/attached_assets/pioneer sounds profile.pdf-image-009_1751535111703.jpg"
+                alt="Safari Park Wedding - Outdoor Garden Ceremony"
+                className="w-full h-80 object-cover"
+              />
+              <div className="p-6">
+                <h3 className="text-2xl font-bold text-white mb-3">Safari Park Wedding</h3>
+                <p className="text-gray-400 mb-4">Elegant outdoor ceremony with lush tropical gardens, red carpet aisle, and pristine audio setup for the perfect "I do" moment.</p>
+                <div className="flex items-center space-x-4 text-sm text-pioneer-orange">
+                  <span>• Professional Sound System</span>
+                  <span>• Microphone Setup</span>
+                  <span>• Event Coordination</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Windsor Golf Club Wedding */}
+            <div className="bg-pioneer-navy rounded-xl overflow-hidden shadow-lg animate-slide-up" style={{animationDelay: '0.1s'}}>
+              <img 
+                src="/attached_assets/pioneer sounds profile.pdf-image-010_1751535111705.jpg"
+                alt="Windsor Golf Club Wedding - Reception Setup"
+                className="w-full h-80 object-cover"
+              />
+              <div className="p-6">
+                <h3 className="text-2xl font-bold text-white mb-3">Windsor Golf Club Wedding</h3>
+                <p className="text-gray-400 mb-4">Sophisticated lawn reception with our Pioneer Sounds band providing live entertainment and crystal-clear audio for the celebration.</p>
+                <div className="flex items-center space-x-4 text-sm text-pioneer-orange">
+                  <span>• Live Band Performance</span>
+                  <span>• Professional Audio</span>
+                  <span>• Reception Setup</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Additional Wedding Venues */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            {[
+              "Great Rift Valley Lodge",
+              "Marula Manor - Karen", 
+              "UN Grounds",
+              "Jockey Club Nairobi",
+              "Nairobi School",
+              "Ridgeways"
+            ].map((venue, index) => (
+              <div 
+                key={index}
+                className="bg-pioneer-navy p-4 rounded-lg text-center hover:bg-pioneer-orange hover:text-white transition-all duration-300 animate-slide-up"
+                style={{ animationDelay: `${index * 0.05}s` }}
+              >
+                <p className="font-semibold text-gray-300 hover:text-white transition-colors">{venue}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Private Events */}
+      <section className="py-20 bg-pioneer-navy">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">Private Events</h2>
@@ -279,7 +341,7 @@ export default function Portfolio() {
             {privateEvents.map((event, index) => (
               <div 
                 key={index}
-                className="bg-pioneer-navy rounded-xl overflow-hidden shadow-lg animate-slide-up"
+                className="bg-pioneer-charcoal rounded-xl overflow-hidden shadow-lg animate-slide-up"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <img 

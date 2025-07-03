@@ -12,7 +12,7 @@ export default function PortfolioSection() {
     },
     {
       title: "Weddings",
-      image: "https://images.unsplash.com/photo-1519741497674-611481863552?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=300",
+      image: "/attached_assets/pioneer sounds profile.pdf-image-009_1751535111703.jpg",
       description: "Safari Park, Windsor Golf Club, Great Rift Valley Lodge, Marula Manor"
     },
     {
