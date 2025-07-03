@@ -1,55 +1,46 @@
 import { useState } from "react";
 import { MapPin, Phone, Mail, Check, Send } from "lucide-react";
-import { useMutation } from "@tanstack/react-query";
-import { useForm } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { insertContactInquirySchema, type InsertContactInquiry } from "@shared/schema";
-import { apiRequest } from "@/lib/queryClient";
-import { useToast } from "@/hooks/use-toast";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 
 export default function ContactSection() {
-  const { toast } = useToast();
-
-  const form = useForm<InsertContactInquiry>({
-    resolver: zodResolver(insertContactInquirySchema),
-    defaultValues: {
-      name: "",
-      email: "",
-      phone: "",
-      eventType: "",
-      eventDate: "",
-      message: "",
-    },
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    eventType: "",
+    eventDate: "",
+    message: "",
   });
 
-  const submitInquiryMutation = useMutation({
-    mutationFn: async (data: InsertContactInquiry) => {
-      const response = await apiRequest("POST", "/api/contact", data);
-      return response.json();
-    },
-    onSuccess: () => {
-      toast({
-        title: "Inquiry Sent Successfully",
-        description: "We'll get back to you soon with a personalized quote.",
-      });
-      form.reset();
-    },
-    onError: (error: Error) => {
-      toast({
-        title: "Error Sending Inquiry",
-        description: error.message || "Please try again later.",
-        variant: "destructive",
-      });
-    },
-  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [showSuccess, setShowSuccess] = useState(false);
 
-  const onSubmit = (data: InsertContactInquiry) => {
-    submitInquiryMutation.mutate(data);
+  const handleInputChange = (field: string, value: string) => {
+    setFormData(prev => ({ ...prev, [field]: value }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    
+    // Simulate form submission (since no database is needed)
+    setTimeout(() => {
+      setIsSubmitting(false);
+      setShowSuccess(true);
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        eventType: "",
+        eventDate: "",
+        message: "",
+      });
+      
+      setTimeout(() => setShowSuccess(false), 5000);
+    }, 1000);
   };
 
   const services = [
@@ -133,146 +124,104 @@ export default function ContactSection() {
           {/* Contact Form */}
           <div className="bg-pioneer-charcoal p-8 rounded-xl shadow-lg animate-slide-up">
             <h3 className="text-2xl font-bold text-white mb-6">Request a Quote</h3>
-            <Form {...form}>
-              <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <FormField
-                    control={form.control}
-                    name="name"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel className="text-gray-300">Name</FormLabel>
-                        <FormControl>
-                          <Input 
-                            {...field}
-                            className="bg-pioneer-navy border-gray-600 text-white focus:border-pioneer-orange"
-                            placeholder="Your Name"
-                          />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-                  <FormField
-                    control={form.control}
-                    name="phone"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel className="text-gray-300">Phone</FormLabel>
-                        <FormControl>
-                          <Input 
-                            {...field}
-                            value={field.value || ""}
-                            type="tel"
-                            className="bg-pioneer-navy border-gray-600 text-white focus:border-pioneer-orange"
-                            placeholder="Your Phone"
-                          />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
+            
+            {showSuccess && (
+              <div className="bg-green-600 text-white p-4 rounded-lg mb-6">
+                <h4 className="font-semibold">Thank you for your inquiry!</h4>
+                <p>We'll get back to you soon with a personalized quote.</p>
+              </div>
+            )}
+            
+            <form onSubmit={handleSubmit} className="space-y-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <label className="block text-gray-300 mb-2">Name</label>
+                  <Input 
+                    value={formData.name}
+                    onChange={(e) => handleInputChange('name', e.target.value)}
+                    className="bg-pioneer-navy border-gray-600 text-white focus:border-pioneer-orange"
+                    placeholder="Your Name"
+                    required
                   />
                 </div>
-                
-                <FormField
-                  control={form.control}
-                  name="email"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel className="text-gray-300">Email</FormLabel>
-                      <FormControl>
-                        <Input 
-                          {...field}
-                          type="email"
-                          className="bg-pioneer-navy border-gray-600 text-white focus:border-pioneer-orange"
-                          placeholder="Your Email"
-                        />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
+                <div>
+                  <label className="block text-gray-300 mb-2">Phone</label>
+                  <Input 
+                    value={formData.phone}
+                    onChange={(e) => handleInputChange('phone', e.target.value)}
+                    type="tel"
+                    className="bg-pioneer-navy border-gray-600 text-white focus:border-pioneer-orange"
+                    placeholder="Your Phone"
+                  />
+                </div>
+              </div>
+              
+              <div>
+                <label className="block text-gray-300 mb-2">Email</label>
+                <Input 
+                  value={formData.email}
+                  onChange={(e) => handleInputChange('email', e.target.value)}
+                  type="email"
+                  className="bg-pioneer-navy border-gray-600 text-white focus:border-pioneer-orange"
+                  placeholder="Your Email"
+                  required
                 />
-                
-                <FormField
-                  control={form.control}
-                  name="eventType"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel className="text-gray-300">Event Type</FormLabel>
-                      <Select onValueChange={field.onChange} value={field.value || ""}>
-                        <FormControl>
-                          <SelectTrigger className="bg-pioneer-navy border-gray-600 text-white focus:border-pioneer-orange">
-                            <SelectValue placeholder="Select Event Type" />
-                          </SelectTrigger>
-                        </FormControl>
-                        <SelectContent className="bg-pioneer-navy border-gray-600">
-                          <SelectItem value="wedding">Wedding</SelectItem>
-                          <SelectItem value="corporate">Corporate Event</SelectItem>
-                          <SelectItem value="concert">Concert/Show</SelectItem>
-                          <SelectItem value="church">Church Event</SelectItem>
-                          <SelectItem value="private">Private Event</SelectItem>
-                          <SelectItem value="other">Other</SelectItem>
-                        </SelectContent>
-                      </Select>
-                      <FormMessage />
-                    </FormItem>
-                  )}
+              </div>
+              
+              <div>
+                <label className="block text-gray-300 mb-2">Event Type</label>
+                <Select value={formData.eventType} onValueChange={(value) => handleInputChange('eventType', value)}>
+                  <SelectTrigger className="bg-pioneer-navy border-gray-600 text-white focus:border-pioneer-orange">
+                    <SelectValue placeholder="Select Event Type" />
+                  </SelectTrigger>
+                  <SelectContent className="bg-pioneer-navy border-gray-600">
+                    <SelectItem value="wedding">Wedding</SelectItem>
+                    <SelectItem value="corporate">Corporate Event</SelectItem>
+                    <SelectItem value="concert">Concert/Show</SelectItem>
+                    <SelectItem value="church">Church Event</SelectItem>
+                    <SelectItem value="private">Private Event</SelectItem>
+                    <SelectItem value="other">Other</SelectItem>
+                  </SelectContent>
+                </Select>
+              </div>
+              
+              <div>
+                <label className="block text-gray-300 mb-2">Event Date</label>
+                <Input 
+                  value={formData.eventDate}
+                  onChange={(e) => handleInputChange('eventDate', e.target.value)}
+                  type="date"
+                  className="bg-pioneer-navy border-gray-600 text-white focus:border-pioneer-orange"
                 />
-                
-                <FormField
-                  control={form.control}
-                  name="eventDate"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel className="text-gray-300">Event Date</FormLabel>
-                      <FormControl>
-                        <Input 
-                          {...field}
-                          value={field.value || ""}
-                          type="date"
-                          className="bg-pioneer-navy border-gray-600 text-white focus:border-pioneer-orange"
-                        />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
+              </div>
+              
+              <div>
+                <label className="block text-gray-300 mb-2">Message</label>
+                <Textarea 
+                  value={formData.message}
+                  onChange={(e) => handleInputChange('message', e.target.value)}
+                  rows={4}
+                  className="bg-pioneer-navy border-gray-600 text-white focus:border-pioneer-orange"
+                  placeholder="Tell us about your event requirements..."
+                  required
                 />
-                
-                <FormField
-                  control={form.control}
-                  name="message"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel className="text-gray-300">Message</FormLabel>
-                      <FormControl>
-                        <Textarea 
-                          {...field}
-                          rows={4}
-                          className="bg-pioneer-navy border-gray-600 text-white focus:border-pioneer-orange"
-                          placeholder="Tell us about your event requirements..."
-                        />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-                
-                <Button 
-                  type="submit" 
-                  disabled={submitInquiryMutation.isPending}
-                  className="w-full bg-pioneer-orange text-white hover:bg-orange-600 transition-all duration-300 shadow-lg"
-                >
-                  {submitInquiryMutation.isPending ? (
-                    "Sending..."
-                  ) : (
-                    <>
-                      <Send className="w-4 h-4 mr-2" />
-                      Send Inquiry
-                    </>
-                  )}
-                </Button>
-              </form>
-            </Form>
+              </div>
+              
+              <Button 
+                type="submit" 
+                disabled={isSubmitting}
+                className="w-full bg-pioneer-orange text-white hover:bg-orange-600 transition-all duration-300 shadow-lg"
+              >
+                {isSubmitting ? (
+                  "Sending..."
+                ) : (
+                  <>
+                    <Send className="w-4 h-4 mr-2" />
+                    Send Inquiry
+                  </>
+                )}
+              </Button>
+            </form>
           </div>
         </div>
       </div>

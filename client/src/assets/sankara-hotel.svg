@@ -1,0 +1,36 @@
+<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Hotel building -->
+  <rect x="80" y="60" width="240" height="200" fill="#8b4513" stroke="#654321" stroke-width="2"/>
+  <rect x="100" y="80" width="200" height="15" fill="#d4af37"/>
+  
+  <!-- Windows -->
+  <rect x="110" y="110" width="20" height="30" fill="#87ceeb" stroke="#4682b4" stroke-width="1"/>
+  <rect x="140" y="110" width="20" height="30" fill="#87ceeb" stroke="#4682b4" stroke-width="1"/>
+  <rect x="170" y="110" width="20" height="30" fill="#87ceeb" stroke="#4682b4" stroke-width="1"/>
+  <rect x="200" y="110" width="20" height="30" fill="#87ceeb" stroke="#4682b4" stroke-width="1"/>
+  <rect x="230" y="110" width="20" height="30" fill="#87ceeb" stroke="#4682b4" stroke-width="1"/>
+  <rect x="260" y="110" width="20" height="30" fill="#87ceeb" stroke="#4682b4" stroke-width="1"/>
+  
+  <!-- Event stage area -->
+  <rect x="90" y="180" width="220" height="60" fill="#2c5aa0" stroke="#1e3a7a" stroke-width="1"/>
+  
+  <!-- Stage setup -->
+  <rect x="180" y="190" width="40" height="20" fill="#333"/>
+  <circle cx="190" cy="195" r="3" fill="#ff6b35"/>
+  <circle cx="210" cy="195" r="3" fill="#ff6b35"/>
+  
+  <!-- Corporate setup tables -->
+  <rect x="120" y="220" width="30" height="15" fill="#8b4513"/>
+  <rect x="160" y="220" width="30" height="15" fill="#8b4513"/>
+  <rect x="200" y="220" width="30" height="15" fill="#8b4513"/>
+  <rect x="240" y="220" width="30" height="15" fill="#8b4513"/>
+  
+  <!-- Lighting -->
+  <circle cx="140" cy="170" r="5" fill="#ffeb3b"/>
+  <circle cx="200" cy="170" r="5" fill="#ffeb3b"/>
+  <circle cx="260" cy="170" r="5" fill="#ffeb3b"/>
+  
+  <!-- Text -->
+  <text x="200" y="40" text-anchor="middle" fill="#fff" font-family="Arial, sans-serif" font-size="16" font-weight="bold">Sankara Hotel</text>
+  <text x="200" y="55" text-anchor="middle" fill="#d4af37" font-family="Arial, sans-serif" font-size="12">Corporate Events &amp; Concerts</text>
+</svg>

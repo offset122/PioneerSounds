@@ -1,13 +1,78 @@
 import Navigation from "@/components/navigation";
 import Footer from "@/components/footer";
 
+// Event-specific image components based on PDF content
+const KICCConcertImage = () => (
+  <div className="w-full h-96 bg-gradient-to-br from-blue-900 to-blue-700 rounded-xl flex items-center justify-center relative overflow-hidden">
+    <div className="absolute inset-0 bg-black opacity-20"></div>
+    <div className="relative text-center text-white z-10">
+      <h3 className="text-2xl font-bold mb-2">KICC Concert Hall</h3>
+      <p className="text-sm opacity-90">Kenyatta International Conference Centre</p>
+      <div className="flex justify-center space-x-4 mt-4">
+        <div className="w-8 h-8 bg-orange-500 rounded-full animate-pulse"></div>
+        <div className="w-8 h-8 bg-yellow-400 rounded-full animate-pulse" style={{animationDelay: '0.2s'}}></div>
+        <div className="w-8 h-8 bg-orange-500 rounded-full animate-pulse" style={{animationDelay: '0.4s'}}></div>
+      </div>
+    </div>
+  </div>
+);
+
+const SankaraHotelImage = () => (
+  <div className="w-full h-96 bg-gradient-to-br from-amber-800 to-amber-600 rounded-xl flex items-center justify-center relative overflow-hidden">
+    <div className="absolute inset-0 bg-black opacity-15"></div>
+    <div className="relative text-center text-white z-10">
+      <h3 className="text-2xl font-bold mb-2">Sankara Hotel</h3>
+      <p className="text-sm opacity-90">Corporate Events & Business Gatherings</p>
+      <div className="grid grid-cols-3 gap-2 mt-4 max-w-24 mx-auto">
+        <div className="w-6 h-6 bg-blue-400 rounded"></div>
+        <div className="w-6 h-6 bg-blue-400 rounded"></div>
+        <div className="w-6 h-6 bg-blue-400 rounded"></div>
+      </div>
+    </div>
+  </div>
+);
+
+const SafariParkWeddingImage = () => (
+  <div className="w-full h-96 bg-gradient-to-br from-green-400 to-blue-400 rounded-xl flex items-center justify-center relative overflow-hidden">
+    <div className="absolute inset-0 bg-white opacity-10"></div>
+    <div className="relative text-center text-white z-10">
+      <h3 className="text-2xl font-bold mb-2">Safari Park Wedding</h3>
+      <p className="text-sm opacity-90">Outdoor Garden Ceremonies</p>
+      <div className="flex justify-center mt-4">
+        <div className="w-16 h-8 border-4 border-white rounded-t-full bg-transparent"></div>
+      </div>
+      <div className="flex justify-center space-x-2 mt-2">
+        <div className="w-3 h-3 bg-pink-400 rounded-full"></div>
+        <div className="w-3 h-3 bg-white rounded-full"></div>
+        <div className="w-3 h-3 bg-pink-400 rounded-full"></div>
+      </div>
+    </div>
+  </div>
+);
+
+const ChurchEventImage = () => (
+  <div className="w-full h-96 bg-gradient-to-br from-amber-700 to-amber-900 rounded-xl flex items-center justify-center relative overflow-hidden">
+    <div className="absolute inset-0 bg-black opacity-25"></div>
+    <div className="relative text-center text-white z-10">
+      <h3 className="text-2xl font-bold mb-2">Church Events</h3>
+      <p className="text-sm opacity-90">Worship Services & Religious Gatherings</p>
+      <div className="flex justify-center mt-4">
+        <div className="relative">
+          <div className="w-1 h-8 bg-yellow-400"></div>
+          <div className="w-6 h-1 bg-yellow-400 absolute top-2 -left-2.5"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+);
+
 export default function Portfolio() {
   const featuredEvents = [
     {
       category: "Concerts & Shows",
       title: "Major Artist Performances",
       description: "We've provided professional audio solutions for renowned artists across premier venues in Kenya",
-      image: "https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600",
+      imageComponent: KICCConcertImage,
       events: [
         { artist: "Amani", venue: "Kenyatta International Conference Centre" },
         { artist: "Churchill", venue: "Kenyatta International Conference Centre" },
@@ -23,7 +88,7 @@ export default function Portfolio() {
       category: "Corporate Events",
       title: "Professional Business Gatherings",
       description: "Delivering crystal-clear audio and professional staging for corporate conferences and events",
-      image: "https://images.unsplash.com/photo-1511578314322-379afb476865?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600",
+      imageComponent: SankaraHotelImage,
       events: [
         { event: "1 FM Launch", venue: "Sankara Hotel" },
         { event: "GM Dinner", venue: "Mavuno Church" },
@@ -43,7 +108,7 @@ export default function Portfolio() {
       category: "Weddings",
       title: "Unforgettable Wedding Celebrations",
       description: "Creating magical moments with perfect audio and lighting for your special day",
-      image: "https://images.unsplash.com/photo-1519741497674-611481863552?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600",
+      imageComponent: SafariParkWeddingImage,
       events: [
         { venue: "Safari Park", description: "Elegant outdoor ceremony and reception" },
         { venue: "Windsor Golf Club", description: "Sophisticated golf course wedding" },
@@ -59,7 +124,7 @@ export default function Portfolio() {
       category: "Church Events",
       title: "Sacred Worship & Religious Gatherings",
       description: "Supporting spiritual communities with clear, powerful audio for worship and special events",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600",
+      imageComponent: ChurchEventImage,
       events: [
         { event: "Bible Trivia", venue: "National Museums" },
         { event: "Christ Embassy Service", venue: "Nyayo National Stadium Museum" },
@@ -166,11 +231,7 @@ export default function Portfolio() {
                     </div>
                   </div>
                   <div className={isEven ? '' : 'lg:col-start-1'}>
-                    <img 
-                      src={category.image}
-                      alt={category.title}
-                      className="rounded-xl shadow-lg w-full h-96 object-cover"
-                    />
+                    <category.imageComponent />
                   </div>
                 </div>
               );

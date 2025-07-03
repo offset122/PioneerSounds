@@ -1,0 +1,48 @@
+<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Church building -->
+  <rect x="100" y="100" width="200" height="150" fill="#8b4513" stroke="#654321" stroke-width="2"/>
+  
+  <!-- Church spire -->
+  <polygon points="200,50 170,100 230,100" fill="#8b4513" stroke="#654321" stroke-width="2"/>
+  
+  <!-- Cross -->
+  <rect x="198" y="60" width="4" height="25" fill="#d4af37"/>
+  <rect x="190" y="68" width="20" height="4" fill="#d4af37"/>
+  
+  <!-- Church door -->
+  <rect x="185" y="200" width="30" height="50" fill="#654321"/>
+  <circle cx="210" cy="225" r="2" fill="#d4af37"/>
+  
+  <!-- Windows -->
+  <rect x="120" y="130" width="15" height="30" fill="#87ceeb" stroke="#4682b4" stroke-width="1"/>
+  <rect x="265" y="130" width="15" height="30" fill="#87ceeb" stroke="#4682b4" stroke-width="1"/>
+  
+  <!-- Stained glass effect -->
+  <rect x="122" y="135" width="5" height="20" fill="#ff69b4"/>
+  <rect x="128" y="135" width="5" height="20" fill="#32cd32"/>
+  <rect x="267" y="135" width="5" height="20" fill="#ff69b4"/>
+  <rect x="273" y="135" width="5" height="20" fill="#32cd32"/>
+  
+  <!-- Sound equipment inside -->
+  <rect x="160" y="180" width="25" height="15" fill="#333"/>
+  <rect x="215" y="180" width="25" height="15" fill="#333"/>
+  <circle cx="172" cy="187" r="3" fill="#ff6b35"/>
+  <circle cx="227" cy="187" r="3" fill="#ff6b35"/>
+  
+  <!-- Congregation -->
+  <g fill="#2c5aa0" opacity="0.8">
+    <rect x="130" y="210" width="8" height="15" rx="4"/>
+    <rect x="145" y="210" width="8" height="15" rx="4"/>
+    <rect x="160" y="210" width="8" height="15" rx="4"/>
+    <rect x="232" y="210" width="8" height="15" rx="4"/>
+    <rect x="247" y="210" width="8" height="15" rx="4"/>
+    <rect x="262" y="210" width="8" height="15" rx="4"/>
+  </g>
+  
+  <!-- Stage/altar area -->
+  <rect x="170" y="110" width="60" height="20" fill="#d4af37"/>
+  
+  <!-- Text -->
+  <text x="200" y="35" text-anchor="middle" fill="#333" font-family="Arial, sans-serif" font-size="16" font-weight="bold">Church Event</text>
+  <text x="200" y="285" text-anchor="middle" fill="#666" font-family="Arial, sans-serif" font-size="12">Worship Services &amp; Religious Gatherings</text>
+</svg>
