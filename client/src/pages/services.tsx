@@ -30,7 +30,7 @@ export default function Services() {
     },
     {
       icon: Lightbulb,
-      title: "Event Lighting & Effects",
+      title: "Event Lighting & Stages",
       description:
         "Dynamic lighting solutions to create the perfect ambiance and visual impact for your event.",
       features: [
@@ -44,7 +44,7 @@ export default function Services() {
     },
     {
       icon: Tv,
-      title: "Video & Projection Equipment",
+      title: "Videography and Photography",
       description:
         "State-of-the-art visual display solutions for presentations, entertainment, and live broadcasts.",
       features: [

@@ -5,38 +5,39 @@ const services = [
     icon: Volume2,
     title: "Sound Systems",
     description: "Professional audio equipment including speakers, mixing consoles, and amplifiers for crystal-clear sound quality.",
-    features: ["Full Range Speakers", "Digital Mixing Consoles", "Professional Microphones"]
+    features: ["Line Array speakers", "Digital Mixing Consoles", "Professional Microphones"]
   },
   {
     icon: Lightbulb,
-    title: "Lighting & Effects",
-    description: "Dynamic lighting solutions to create the perfect ambiance for your event with LED and moving head lights.",
+    title: "Lighting & Stages",
+    description: "Professional staging solutions for performances, Dynamic lighting solutions to create the perfect ambiance for your event with LED and moving head lights.",
     features: ["LED Parcan Lights", "Moving Head Lights", "Wall Washers"]
   },
   {
     icon: Tv,
-    title: "Video & Projection",
-    description: "High-quality projectors and screens for presentations, videos, and visual displays.",
-    features: ["HD Projectors", "Projection Screens", "Plasma Displays"]
+    title: "Led ,Plasma screens & Projection",
+    description: "High-quality Led Panels for presentations, and visual displays.",
+    features: ["HD Projectors", "Projection Screens", "Led & Plasma Displays"]
   },
   {
     icon: Guitar,
     title: "Backline Gear",
     description: "Complete musical instrument setup including keyboards, drum sets, and amplification for live performances.",
-    features: ["Yamaha Keyboards", "Professional Drum Mics", "Instrument Amplifiers"]
+    features: ["Yamaha Keyboards", "Professional Drum sets", "Instrument Amplifiers"]
   },
   {
     icon: Layers,
-    title: "Stages & Platforms",
-    description: "Professional staging solutions for performances, presentations, and ceremonies of all sizes.",
-    features: ["Modular Stage Systems", "Custom Staging", "Safety Barriers"]
+    title: "Backup Generators",
+    description: "Backup Generators, presentations, and ceremonies of all sizes.",
+    features: ["Backup Generators from 3kva to 60kva"  ]
   },
-  {
-    icon: Music,
-    title: "DJ Equipment",
-    description: "Professional DJ setups with decks, controllers, and sound systems for parties and events.",
-    features: ["Professional DJ Decks", "Digital Controllers", "Monitoring Systems"]
-  }
+
+    {
+        "icon": "Camera",
+        "title": "Videography and Photography",
+        "description": "High-quality cameras and video recording equipment for capturing events, interviews, and creative projects.",
+        "features": ["DSLR and Mirrorless Cameras", "4K Video Recorders", "Live Streaming services" , "Lighting Kits", "Tripods and Stabilizers"]
+    }
 ];
 
 export default function ServicesSection() {

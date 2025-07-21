@@ -50,13 +50,14 @@ export default function ContactSection() {
 
   const services = [
     "Professional Sound Systems",
-    "Event Lighting & Effects",
-    "Video & Projection Equipment",
-    "Staging & Platform Solutions",
+    "Event Lighting & Stages",
+    "Videography & Photography",
     "Backline Musical Equipment",
     "Professional DJ Equipment",
+      "Generators",
   ];
 
+  // @ts-ignore
   return (
       <section id="contact" className="py-20 bg-pioneer-navy">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -86,7 +87,7 @@ export default function ContactSection() {
                     <div>
                       <p className="text-white font-bold text-lg">We are proudly located in Kiambu Town</p>
                       <div className="text-white font-semibold">
-                        <p className="text-xl">Kiambu Town, Kika Stalls Suite E8</p>
+                        <p className="text-xl">Kiambu Town, Kika business centre suite f4 and E8</p>
                         <p className="text-sm text-white">
                           P.O BOX 322-00900 Kiambu, Kenya
                         </p>
@@ -114,7 +115,7 @@ export default function ContactSection() {
                       <p className="text-gray-400">Phone</p>
                       <div className="text-white font-semibold">
                         <p>0720-495135</p>
-                        <p>0738-050639</p>
+                        <p>0780-495135</p>
                       </div>
                     </div>
                   </div>
@@ -127,7 +128,7 @@ export default function ContactSection() {
                     <div>
                       <p className="text-gray-400">Email</p>
                       <div className="text-white font-semibold">
-                        <p>pioneersounds@gmail.com</p>
+                        <p>info.pioneersounds2008@gmail.com</p>
                         <p className="text-pioneer-orange text-sm">
                           www.pioneersounds.co.ke
                         </p>

@@ -4,15 +4,15 @@ import { Users, Award, Clock, CheckCircle } from "lucide-react";
 
 export default function About() {
   const stats = [
-    { icon: Users, label: "Happy Clients", value: "500+" },
-    { icon: Award, label: "Years Experience", value: "12+" },
+    { icon: Users, label: "Happy Clients", value: "1000+" },
+    { icon: Award, label: "Years Experience", value: "20+" },
     { icon: Clock, label: "Events Covered", value: "1000+" },
     { icon: CheckCircle, label: "Success Rate", value: "99%" }
   ];
 
   const team = [
     {
-      name: "Pioneer Sounds Band",
+      name: "Pioneer Sounds and entertainment",
       role: "Professional Entertainment",
       description: "Our in-house band provides live entertainment for events"
     },
@@ -50,10 +50,10 @@ export default function About() {
       <section className="pt-20 pb-16 bg-gradient-pioneer">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 animate-fade-in">
-            About Pioneer Sounds
+            About Pioneer Sounds and entertainment
           </h1>
           <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-            Your trusted partner for professional audio, lighting, and staging solutions since 2012
+            Your trusted partner for professional audio, lighting, and staging solutions since 2008
           </p>
         </div>
       </section>
@@ -89,7 +89,7 @@ export default function About() {
             <div className="animate-slide-up">
               <h2 className="text-4xl font-bold text-white mb-6">Our Story</h2>
               <p className="text-gray-300 mb-6 text-lg leading-relaxed">
-                Since 2012, Pioneer Sounds has been Kenya's premier provider of professional audio, 
+                Since 2008, Pioneer Sounds has been Kenya's premier provider of professional audio,
                 lighting, and staging equipment. Based in Kiambu Town, we've grown from a small 
                 startup to a trusted partner for major events across the country.
               </p>

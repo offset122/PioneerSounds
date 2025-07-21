@@ -69,7 +69,7 @@
 }
 
 :root {
-  --background: hsl(0, 0%, 100%);
+  --background: hsl(0, 5%, 4%);
   --foreground: hsl(20, 14.3%, 4.1%);
   --muted: hsl(60, 4.8%, 95.9%);
   --muted-foreground: hsl(25, 5.3%, 44.7%);
@@ -94,7 +94,7 @@
   --pioneer-navy: hsl(214, 32%, 16%);
   --pioneer-charcoal: hsl(217, 29%, 22%);
   --pioneer-orange: hsl(24, 100%, 48%);
-  --pioneer-light: hsl(210, 17%, 98%);
+  --pioneer-light: hsl(0, 8%, 3%);
   --pioneer-green: hsl(120, 60%, 50%);
   --pioneer-blue: hsl(207, 90%, 54%);
   --pioneer-gray: hsl(220, 15%, 60%);

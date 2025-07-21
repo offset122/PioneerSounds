@@ -9,7 +9,7 @@ export default function Contact() {
       icon: MapPin,
       title: "Visit Our Office",
       details: [
-        "Kiambu Town, Kika Stalls Suite E8",
+        "Kiambu Town, Kika business center ",
         "P.O BOX 322-00900 Kiambu",
         "Kenya"
       ]
@@ -19,14 +19,14 @@ export default function Contact() {
       title: "Call Us",
       details: [
         "0720-495135",
-        "0738-050639"
+        "0780-495135"
       ]
     },
     {
       icon: Mail,
       title: "Email Us",
       details: [
-        "pioneersounds@gmail.com",
+        "info.pioneersounds2008@gmail.com",
         "www.pioneersounds.co.ke"
       ]
     },
@@ -34,18 +34,17 @@ export default function Contact() {
       icon: Clock,
       title: "Business Hours",
       details: [
-        "Monday - Friday: 8:00 AM - 6:00 PM",
+        "Monday - Friday: 8:00 AM - 9:00 PM",
         "Saturday: 9:00 AM - 5:00 PM",
-        "Sunday: Available for events"
+        "Sunday: Available on appointment"
       ]
     }
   ];
 
   const services = [
     "Professional Sound Systems",
-    "Event Lighting & Effects", 
-    "Video & Projection Equipment",
-    "Staging & Platform Solutions",
+    "Event Lighting & Stages",
+    "Videography & Photography",
     "Backline Musical Equipment",
     "Professional DJ Equipment",
     "Power Generation Solutions",
@@ -118,7 +117,7 @@ export default function Contact() {
               <div className="text-center">
                 <MapPin className="w-16 h-16 text-pioneer-orange mx-auto mb-4" />
                 <h3 className="text-2xl font-bold text-white mb-2">Kiambu Town Location</h3>
-                <p className="text-gray-400 mb-2">Kika Stalls Suite E8</p>
+                <p className="text-gray-400 mb-2">Kika Business center suite f4 and E8</p>
                 <p className="text-gray-400">P.O BOX 322-00900 Kiambu, Kenya</p>
               </div>
             </div>
@@ -141,7 +140,7 @@ export default function Contact() {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-pioneer-navy p-8 rounded-xl shadow-lg">
-              <h3 className="text-2xl font-bold text-white mb-4">12+ Years Experience</h3>
+              <h3 className="text-2xl font-bold text-white mb-4">20+ Years Experience</h3>
               <p className="text-gray-400">Over a decade of successful events across Kenya, from intimate weddings to major concerts.</p>
             </div>
             <div className="bg-pioneer-navy p-8 rounded-xl shadow-lg">
@@ -157,7 +156,7 @@ export default function Contact() {
               <p className="text-gray-400">Serving organizations like Total Kenya, KCB, Catholic University, and many more.</p>
             </div>
             <div className="bg-pioneer-navy p-8 rounded-xl shadow-lg">
-              <h3 className="text-2xl font-bold text-white mb-4">"Clarity Non-Stop"</h3>
+              <h3 className="text-2xl font-bold text-white mb-4">"Service Beyond the obvious"</h3>
               <p className="text-gray-400">Our promise of uninterrupted, crystal-clear audio throughout your event.</p>
             </div>
             <div className="bg-pioneer-navy p-8 rounded-xl shadow-lg">

@@ -33,12 +33,13 @@ const SankaraHotelImage = () => (
 );
 
 const SafariParkWeddingImage = () => (
-  <div className="w-full rounded-xl overflow-hidden shadow-lg">
-    <img 
-      src="/attached_assets/pioneer sounds profile.pdf-image-009_1751535111703.jpg"
-      alt="Pioneer Sounds Wedding Setup - Outdoor Garden Ceremony"
-      className="w-full h-96 object-cover"
-    />
+    <div className="w-full rounded-xl overflow-hidden shadow-lg">
+      <img
+          src="https://pceaunityparish.org/wp-content/uploads/2025/05/banner-2-1-scaled.jpg"
+          alt="Pioneer Sounds Wedding Setup - Outdoor Garden Ceremony"
+          className="w-full h-96 object-cover"
+      />
+
   </div>
 );
 
@@ -177,7 +178,7 @@ export default function Portfolio() {
             Our Portfolio
           </h1>
           <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-            Delivering excellence across diverse events and prestigious venues since 2012
+            Delivering excellence across diverse events and prestigious venues since 2008
           </p>
         </div>
       </section>
@@ -232,11 +233,11 @@ export default function Portfolio() {
         </div>
       </section>
 
-      {/* Pioneer Sounds Band */}
+      {/* Pioneer Sounds  */}
       <section className="py-20 bg-pioneer-navy">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">Pioneer Sounds Band</h2>
+            <h2 className="text-4xl font-bold text-white mb-4">Pioneer Sounds and entertainment</h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
               Our professional in-house band provides live entertainment for events across Nairobi
             </p>
@@ -271,7 +272,7 @@ export default function Portfolio() {
             {/* Safari Park Wedding */}
             <div className="bg-pioneer-navy rounded-xl overflow-hidden shadow-lg animate-slide-up">
               <img 
-                src="/attached_assets/pioneer sounds profile.pdf-image-009_1751535111703.jpg"
+                src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2b/f2/48/eb/an-oasis-of-tranquility.jpg?w=900&h=-1&s=1"
                 alt="Safari Park Wedding - Outdoor Garden Ceremony"
                 className="w-full h-80 object-cover"
               />
@@ -289,7 +290,7 @@ export default function Portfolio() {
             {/* Windsor Golf Club Wedding */}
             <div className="bg-pioneer-navy rounded-xl overflow-hidden shadow-lg animate-slide-up" style={{animationDelay: '0.1s'}}>
               <img 
-                src="/attached_assets/pioneer sounds profile.pdf-image-010_1751535111705.jpg"
+                src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/29/6f/2d/7a/windsor-golf-hotel-and.jpg?w=900&h=500&s=1"
                 alt="Windsor Golf Club Wedding - Reception Setup"
                 className="w-full h-80 object-cover"
               />

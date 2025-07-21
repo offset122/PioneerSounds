@@ -19,21 +19,24 @@ export default function HeroSection() {
           <span className="text-pioneer-orange drop-shadow-lg"> Sounds</span>
         </h1>
         <p className="text-2xl md:text-3xl text-pioneer-orange font-semibold mb-4 drop-shadow-md">
-          "clarity non-stop"
+          "service beyond the obvious"
         </p>
-        <p className="text-xl md:text-2xl text-gray-200 mb-8 max-w-4xl mx-auto leading-relaxed drop-shadow-md">
-          Your one-stop events gear provider for the hire of Sound, Projectors, Screens, Backline Gear, Video, Lighting & Stages
+        <p className="hero-description text-xl md:text-2xl mb-8 max-w-4xl mx-auto font-bold text-black">
+          Your one-stop events gear provider for the hire of Sound, Projectors, Screens, Backline Gear, Video, Lighting
+          & Stages
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link href="/services">
-            <button className="bg-pioneer-orange text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-orange-600 transition-all duration-300 shadow-lg flex items-center justify-center gap-2 hover:shadow-xl">
-              <Play className="w-5 h-5" />
+            <button
+                className="bg-pioneer-orange text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-orange-600 transition-all duration-300 shadow-lg flex items-center justify-center gap-2 hover:shadow-xl">
+              <Play className="w-5 h-5"/>
               Explore Services
             </button>
           </Link>
           <Link href="/contact">
-            <button className="border-2 border-pioneer-orange text-pioneer-orange px-8 py-4 rounded-lg text-lg font-semibold hover:bg-pioneer-orange hover:text-white transition-all duration-300 flex items-center justify-center gap-2 shadow-lg hover:shadow-xl">
-              <Phone className="w-5 h-5" />
+            <button
+                className="border-2 border-pioneer-orange text-pioneer-orange px-8 py-4 rounded-lg text-lg font-semibold hover:bg-pioneer-orange hover:text-white transition-all duration-300 flex items-center justify-center gap-2 shadow-lg hover:shadow-xl">
+              <Phone className="w-5 h-5"/>
               Get Quote
             </button>
           </Link>

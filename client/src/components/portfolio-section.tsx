@@ -3,7 +3,7 @@ export default function PortfolioSection() {
     {
       title: "Concerts & Shows",
       image:
-        "https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=300",
+        "https://media.istockphoto.com/id/638873750/photo/the-judiciary-and-kenyatta-international-convention-center-nair.jpg?s=612x612&w=0&k=20&c=VIRC0x1IhibeybpaMJC3FcDNe8XTxvst5Vn6V1rJpX4=",
       description:
         "Amani, Churchill, Sauti Sol, Suzanna Owiyo, Juliani, Dan Chizi Aceda",
     },
@@ -21,12 +21,7 @@ export default function PortfolioSection() {
       description:
         "Safari Park, Windsor Golf Club, Great Rift Valley Lodge, Marula Manor",
     },
-    {
-      title: "Church Events",
-      image:
-        "https://media.istockphoto.com/id/1441204224/photo/live-streaming-broadcast-in-the-protestant-church-i-cleveland-the-operator-behind-the-camera.jpg?s=612x612&w=0&k=20&c=4xrQXeIqdD2SBhVnHNt47k8vOdLgfRF7lO5_f0m0pLQ=",
-      description: "National Museums, Redeemed Gospel Church, PCEA St Andrews",
-    },
+
   ];
 
   const featuredArtists = [
